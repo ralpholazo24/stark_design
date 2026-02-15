@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "system_name": "STARK CORE / iOS",
+    "version": "2.0.0-SWIFTUI",
+    "agency": "STARK_INT_DESIGN_GROUP",
+    "platform": "Apple iOS (SwiftUI Primary)",
+    "last_updated": "2025-02-11T15:00:00Z",
+    "description": "A performance-driven framework engineered for high-kinetic mobile environments. This specification translates Swiss-Rationalism into SwiftUI-ready patterns, prioritizing haptic feedback and raw data visibility."
+  },
+  "design_principles": {
+    "01_data_primacy": "Information over decoration. Utility justifies existence.",
+    "02_kinetic_haptics": "Physical feedback must mirror visual high-contrast changes. Every 'Stark' moment is felt.",
+    "03_editorial_logic": "Typography is the primary structural element. Space Grotesk as the core brand font.",
+    "04_absolute_alignment": "Strict 8pt (Point) grid for iOS scaling. Compliance is non-negotiable."
+  },
+  "tokens": {
+    "color": {
+      "semantic_ios": {
+        "systemBackground": "#F8F8F8",
+        "secondarySystemBackground": "#FFFFFF",
+        "tertiarySystemBackground": "#E5E5E5",
+        "label": "#000000",
+        "secondaryLabel": "rgba(0,0,0,0.6)",
+        "accent": "#FF6B00"
+      },
+      "palette": {
+        "onyx": "#000000",
+        "kinetic_orange": "#FF6B00",
+        "stark_white": "#FFFFFF",
+        "stark_gray": "#F0F0F0"
+      }
+    },
+    "typography_ios": {
+      "primary": {
+        "family": "Space Grotesk",
+        "fallbacks": ["SF Pro Display", "system-ui"],
+        "scale": {
+          "largeTitle": { "size": "48pt", "weight": "800", "tracking": "-0.05em" },
+          "title1": { "size": "32pt", "weight": "700", "tracking": "-0.03em" },
+          "headline": { "size": "17pt", "weight": "700", "tracking": "0em" },
+          "body": { "size": "16pt", "weight": "400", "tracking": "0em" },
+          "footnote": { "size": "12pt", "weight": "700", "tracking": "0.1em", "case": "uppercase" }
+        }
+      },
+      "technical": {
+        "family": "JetBrains Mono",
+        "usage": "All numerical data, metrics, and system status logs."
+      }
+    },
+    "haptics_map": {
+      "primary_action": "impact(.heavy)",
+      "toggle_on": "notification(.success)",
+      "goal_reached": "notification(.success) + impact(.rigid)",
+      "error": "notification(.error)",
+      "scroll_selection": "selection()"
+    },
+    "motion_swiftui": {
+      "spring_bouncy": "Animation.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0)",
+      "spring_stiff": "Animation.spring(response: 0.2, dampingFraction: 1.0, blendDuration: 0)",
+      "brutalist_linear": "Animation.linear(duration: 0.15)"
+    }
+  },
+  "component_architecture_swiftui": {
+    "StarkButton": {
+      "padding": "EdgeInsets(top: 16, leading: 24, bottom: 16, trailing: 24)",
+      "border": "2pt Solid Onyx",
+      "shadow": "offset: 6pt, radius: 0pt, color: Onyx",
+      "interaction": "scales(0.98) on press"
+    },
+    "StarkCard": {
+      "cornerRadius": "0pt (Brutalist Strict)",
+      "background": "Color.white",
+      "overlay": "Border(width: 2, color: .black)",
+      "shadow": "offset: 8, radius: 0"
+    },
+    "MetricDisplay": {
+      "alignment": "Leading",
+      "font": "JetBrains Mono",
+      "accent": "Kinetic Orange"
+    }
+  },
+  "adaptive_layout": {
+    "compact": "Full-width stacking. 16pt safe area margins.",
+    "regular": "Multi-column grid. Dynamic Type support up to 200%.",
+    "navigation": "Custom bottom tab bar with 80pt height. No SF Symbols; use custom Stark glyphs."
+  },
+  "accessibility": {
+    "dynamic_type": "Supported across all editorial headers.",
+    "voice_over": "Explicit trait labeling for all 'Stark' metrics.",
+    "haptics_for_a11y": "Sensory reinforcement for all status changes."
+  }
+}
